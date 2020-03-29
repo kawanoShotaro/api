@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
-import {UPDATE_CURRENT,UPDATE_BOOK} from './mutation-types'
-import { NULL } from 'node-sass'
+import {UPDATE_CURRENT,UPDATE_BOOK} from '@/src/store/mutation-types'
 
 Vue.use(Vuex)
 
@@ -27,7 +26,7 @@ export default new Vuex.Store({
     },
     getBookById(state){
       return id => {
-        returnstate.books.find(book => book.id === id)
+        return state.books.find(book => book.id === id)
       }
     },
     current(state){
